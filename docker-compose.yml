@@ -1,0 +1,9 @@
+version: '3'
+services:
+  website:
+    image: nginx:stable-alpine
+    container_name: website
+    volumes:
+      - ./build/web:/usr/share/nginx/html
+    ports:
+      - 80:80
